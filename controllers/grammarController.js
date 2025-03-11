@@ -33,8 +33,7 @@ const checkForGrammaticalErrors = async (req, res) => {
             messages: [
                 { role: 'user', content: prompt }
             ],
-            // model: 'gpt-4o',
-            model: 'gpt-3.5-turbo-0125',
+            model: 'gpt-4o-mini',
         });
         token_usage = chatCompletion.usage.prompt_tokens
         token_usage += chatCompletion.usage.completion_tokens
