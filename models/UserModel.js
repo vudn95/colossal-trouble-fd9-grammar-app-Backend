@@ -20,10 +20,10 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  isAdmin: {
-    type: DataTypes.BOOLEAN,
+  role: {
+    type: DataTypes.ENUM("admin", "dev", "user"),
     allowNull: false,
-    defaultValue: false,
+    defaultValue: "user",
   },
 }, {
   timestamps: true,
